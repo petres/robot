@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>418</width>
-    <height>491</height>
+    <height>587</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <item>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0" alignment="Qt::AlignHCenter">
-      <widget class="QSlider" name="verticalSlider_1">
+      <widget class="QSlider" name="slider_servo_gamma">
        <property name="maximum">
         <number>180</number>
        </property>
@@ -26,18 +26,27 @@
        </property>
        <property name="orientation">
         <enum>Qt::Vertical</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>15</number>
        </property>
       </widget>
      </item>
      <item row="1" column="2" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="label_servo_alpha">
        <property name="text">
         <string>TextLabel</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
      <item row="0" column="4" alignment="Qt::AlignHCenter">
-      <widget class="QSlider" name="verticalSlider_4">
+      <widget class="QSlider" name="slider_servo_theta">
        <property name="maximum">
         <number>180</number>
        </property>
@@ -46,18 +55,27 @@
        </property>
        <property name="orientation">
         <enum>Qt::Vertical</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>15</number>
        </property>
       </widget>
      </item>
      <item row="1" column="3" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="label_servo_beta">
        <property name="text">
         <string>TextLabel</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
      <item row="0" column="3" alignment="Qt::AlignHCenter">
-      <widget class="QSlider" name="verticalSlider_3">
+      <widget class="QSlider" name="slider_servo_beta">
        <property name="maximum">
         <number>180</number>
        </property>
@@ -66,25 +84,37 @@
        </property>
        <property name="orientation">
         <enum>Qt::Vertical</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>15</number>
        </property>
       </widget>
      </item>
      <item row="1" column="0" rowspan="2" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-      <widget class="QLabel" name="label_1">
+      <widget class="QLabel" name="label_servo_gamma">
        <property name="text">
         <string>TextLabel</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
      <item row="1" column="4" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-      <widget class="QLabel" name="label_4">
+      <widget class="QLabel" name="label_servo_theta">
        <property name="text">
         <string>TextLabel</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
      <item row="0" column="2" alignment="Qt::AlignHCenter">
-      <widget class="QSlider" name="verticalSlider_2">
+      <widget class="QSlider" name="slider_servo_alpha">
        <property name="maximum">
         <number>180</number>
        </property>
@@ -93,6 +123,209 @@
        </property>
        <property name="orientation">
         <enum>Qt::Vertical</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>15</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="3" alignment="Qt::AlignHCenter">
+      <widget class="QSlider" name="slider_circle_height">
+       <property name="minimum">
+        <number>-50</number>
+       </property>
+       <property name="maximum">
+        <number>156</number>
+       </property>
+       <property name="value">
+        <number>50</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>15</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+      <widget class="QLabel" name="label_circle_gamma">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+      <widget class="QLabel" name="label_circle_length">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2" alignment="Qt::AlignHCenter">
+      <widget class="QSlider" name="slider_circle_length">
+       <property name="minimum">
+        <number>-30</number>
+       </property>
+       <property name="maximum">
+        <number>156</number>
+       </property>
+       <property name="value">
+        <number>90</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>15</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+      <widget class="QLabel" name="label_circle_height">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" alignment="Qt::AlignHCenter">
+      <widget class="QSlider" name="slider_circle_gamma">
+       <property name="maximum">
+        <number>180</number>
+       </property>
+       <property name="value">
+        <number>90</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>15</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="3" alignment="Qt::AlignHCenter">
+      <widget class="QSlider" name="slider_cartesian_z">
+       <property name="minimum">
+        <number>-50</number>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>50</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>15</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+      <widget class="QLabel" name="label_cartesian_x">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+      <widget class="QLabel" name="label_cartesian_y">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2" alignment="Qt::AlignHCenter">
+      <widget class="QSlider" name="slider_cartesian_y">
+       <property name="minimum">
+        <number>-100</number>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>90</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>15</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+      <widget class="QLabel" name="label_cartesian_z">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" alignment="Qt::AlignHCenter">
+      <widget class="QSlider" name="slider_cartesian_x">
+       <property name="minimum">
+        <number>-100</number>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>90</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+       <property name="tickInterval">
+        <number>15</number>
        </property>
       </widget>
      </item>
