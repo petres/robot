@@ -1,13 +1,13 @@
 #include <Servo.h>
 
-#define DEBUG 0
+#define DEBUG 1
 
 const int servoCount = 4;
 
 Servo servo[servoCount];
 int pins[servoCount] = {9, 10, 11, 12};
 
-const byte numChars = 16;
+const byte numChars = 32;
 char receivedChars[numChars];
 
 boolean gotNewLine = false;
@@ -20,7 +20,7 @@ void setup() {
     Serial.begin(2000000);
     for(int i = 0; i < servoCount; i += 1)
         servo[i].attach(pins[i]);
-    
+
     #if DEBUG
     Serial.println("Ready!");
     #endif
