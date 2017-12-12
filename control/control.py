@@ -135,8 +135,6 @@ class ControlDialog(QDialog, Ui_Robot):
             values['circle'] =  cartesianToCircle(values['cartesian'])
             values['servo'] = circleToServo(values['circle'])
 
-        #print(values)
-
         for i, v in values['servo'].items():
             if v < 0 or v > 180:
                 raise NotReachableException('Out of range. Servo {} has value {}.'.format(i, v))
@@ -175,13 +173,10 @@ class ControlDialog(QDialog, Ui_Robot):
                     info['slider'].blockSignals(False)
 
 
-
         message = " ".join(["{}:{}".format(config.getint(k, 'output'), v) for k, v in values['servo'].items()])
-        #for k, v in values['servo'].items():
-            #self.ser.write(str(Sliders['servo'][k]['output']).encode('ascii') + b':' + str(v).encode('ascii') + b'\n')
-        #     += "{}:{}".format(Sliders['servo'][k]['output'], v)
         self.messageEdit.setText(message)
         if config.getboolean('Serial', 'enabled') and self.ser.isOpen():
+            message += "\n"
             self.ser.write(message.encode('ascii'))
 
         self.showStatus('Sent!', 'success')
